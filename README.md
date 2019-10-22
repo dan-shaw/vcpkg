@@ -1,4 +1,10 @@
-# Vcpkg
+# vcpkg: the C++ package manager
+
+[![Build Status](https://dev.azure.com/vcpkg/public/_apis/build/status/vcpkg-Windows-master-CI?branchName=master)](https://dev.azure.com/vcpkg/public/_build/latest?definitionId=9&branchName=master)
+
+Github: [https://github.com/microsoft/vcpkg](https://github.com/microsoft/vcpkg)
+Slack: [https://cpplang.now.sh/](https://cpplang.now.sh/), the #vcpkg channel
+Docs: [https://github.com/microsoft/vcpkg/docs/index.md](https://github.com/microsoft/vcpkg/docs/index.md)
 
 ## Overview
 Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS. This tool and ecosystem are constantly evolving; your involvement is vital to its success!
