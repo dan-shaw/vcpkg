@@ -29,7 +29,7 @@ Clone the repo:
 ```
 
 Run the bootstrap script
-* Windows
+* Windows 
 ```
 PS> .\bootstrap-vcpkg.bat
 ```
@@ -60,9 +60,7 @@ PS> .\vcpkg integrate install
 Linux:~/$ ./vcpkg integrate install
 ```
 
-See the documentation on [integration](docs/users/integration.md).
-
-For more information, see our [using a package](docs/examples/installing-and-using-packages.md) example for the specifics. If your library is not present in vcpkg catalog, you can open an [issue on the GitHub repo](https://github.com/microsoft/vcpkg/issues) where the dev team and the community can see it and potentially create the port file for this library.
+For more information, see the documentation on [integration](docs/users/integration.md).
 
 ## Available Commands
 
@@ -74,11 +72,9 @@ Commands:
   vcpkg remove <pkg>...           Uninstall a package
   vcpkg list                      List installed packages
   vcpkg update                    Display list of packages for updating
-  vcpkg x-history <pkg>           Shows the history of CONTROL versions of a package
   vcpkg integrate install         Make installed packages available user-wide. Requires admin privileges on first use
-  vcpkg integrate remove          Remove user-wide integration
   vcpkg integrate project         Generate a referencing nuget package for individual VS project use
-
+  ...
   vcpkg export <pkg>... [opt]...  Exports a package
   vcpkg import <pkg>              Import a pre-built library
   ...
