@@ -6,8 +6,19 @@
 * Slack: [https://cpplang.now.sh/](https://cpplang.now.sh/), the #vcpkg channel
 * Docs: [https://github.com/microsoft/vcpkg/blob/master/docs/index.md](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)
 
+| Triplet  | Supported libraries |
+| ------------- | ------------- |
+| x64-windows  | 1151  |
+| x86-windows  | 1136  |
+| x64-windows-static  | 1061  |
+| x64-linux  | 980  |
+| x64-osx  | 939  |
+| arm64-windows  | 766  |
+| x64-uwp  | 624  |
+| arm-uwp  | 594  |
+
 ## Overview
-Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS. This tool and ecosystem are constantly evolving; your involvement is vital to its success!
+Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS.
 
 ## Quick Start
 Prerequisites:
@@ -30,7 +41,7 @@ PS> .\bootstrap-vcpkg.bat
 Linux:~/$ ./bootstrap-vcpkg.sh
 ```
 
-Install any packages with
+Install any package with
 ```
 ./vcpkg install zlib
 ```
@@ -64,31 +75,16 @@ Commands:
   vcpkg search [pat]              Search for packages available to be built
   vcpkg install <pkg>...          Install a package
   vcpkg remove <pkg>...           Uninstall a package
-  vcpkg remove --outdated         Uninstall all out-of-date packages
   vcpkg list                      List installed packages
   vcpkg update                    Display list of packages for updating
-  vcpkg upgrade                   Rebuild all outdated packages
   vcpkg x-history <pkg>           Shows the history of CONTROL versions of a package
-  vcpkg hash <file> [alg]         Hash a file by specific algorithm, default SHA512
-  vcpkg help topics               Display the list of help topics
-  vcpkg help <topic>              Display help for a specific topic
-
   vcpkg integrate install         Make installed packages available user-wide. Requires admin privileges on first use
   vcpkg integrate remove          Remove user-wide integration
   vcpkg integrate project         Generate a referencing nuget package for individual VS project use
-  vcpkg integrate powershell      Enable PowerShell tab-completion
 
   vcpkg export <pkg>... [opt]...  Exports a package
-  vcpkg edit <pkg>                Open up a port for editing (uses %%EDITOR%%, default 'code')
   vcpkg import <pkg>              Import a pre-built library
-  vcpkg create <pkg> <url>
-             [archivename]        Create a new package
-  vcpkg owns <pat>                Search for files in installed packages
-  vcpkg depend-info [pkg]...      Display a list of dependencies for packages
-  vcpkg env                       Creates a clean shell environment for development or compiling.
-  vcpkg version                   Display version information
-  vcpkg contact                   Display contact information to send feedback
-
+  ...
 Options:
   --triplet <t>                   Specify the target architecture triplet
                                   (default: %%VCPKG_DEFAULT_TRIPLET%%, see 'vcpkg help triplet')
@@ -97,20 +93,7 @@ Options:
 
   --overlay-triplets=<path>       Specify directories containing triplets files
 
-  --vcpkg-root <path>             Specify the vcpkg root directory
-                                  (default: %%VCPKG_ROOT%%)
-
-  --x-scripts-root=<path>             (Experimental) Specify the scripts root directory
-
-  @response_file                  Specify a response file to provide additional parameters
 ```
-
-## Examples
-See the [documentation](docs/index.md) for specific walkthroughs, including [installing and using a package](docs/examples/installing-and-using-packages.md), [adding a new package from a zipfile](docs/examples/packaging-zipfiles.md), and [adding a new package from a GitHub repo](docs/examples/packaging-github-repos.md).
-
-Our docs are now also available online at ReadTheDocs: <https://vcpkg.readthedocs.io/>!
-
-See a 4 minute [video demo](https://www.youtube.com/watch?v=y41WFKbQFTw).
 
 ## Contributing
 Vcpkg is built with your contributions. Here are some ways you can contribute:
