@@ -12,7 +12,7 @@
 
 ## What can vcpkg do?
 * __Portable:__ Works on Windows, Linux, Mac OSX. Supports custom target platforms, you just need to provide vcpkg with custom toolchains and triplets to build your libraries for platforms like Android, iOS, FreeBSD.
-* __Extensive library catalogue:__ Over 900 libraries for Windows, Linux, and MacOS; and with more being added every day! (See our monthly [releases](https://github.com/microsoft/vcpkg/releases) to learn which libraries have been added recently)
+* __Extensive library catalogue:__ Over 900 libraries for Windows, Linux, and MacOS and with more being added every day! (See our monthly [releases](https://github.com/microsoft/vcpkg/releases) to learn which libraries have been added recently. You can also checkout older versions of libraries.
 * __Avoid C++ dependency problems:__ vcpkg was designed so that almost all libraries work together out of the box. If you use vcpkg, you won't have to worry too much about dependency resolution, broken diamonds, ODR, and other library resolution problems.
 * __Customizable:__ create your own port and triplet repositories and point vcpkg at them using our overlay features. We also support various buildsystems such as Meson and Make.
 * __Active GitHub community:__ Our active GitHub community adds and updates libraries daily. Open an issue or ask a question on Slack!
@@ -68,11 +68,11 @@ The vcpkg directory layout was designed to make it easy to use it with any build
 
 | Directory Layout  | File Types |
 | ------------- | ------------- |
-| `installed\[triplet]\bin` | Shared libraries/DLLs/Shared objects |
-| `installed\[triplet]\lib` | Static libraries/lib files |
-| `installed\[triplet]\include`. | Header files |
-| `installed\[triplet]\tools`. | Additional Binaries/executables/tools built |
-| `installed\[triplet]\share` | License, Usage and CMake integration files |
+| `installed\<triplet>\bin` | Shared libraries/DLLs/Shared objects |
+| `installed\<triplet>\lib` | Static libraries/lib files |
+| `installed\<triplet>\include` | Header files |
+| `installed\<triplet>\tools` | Additional Binaries/executables/tools built |
+| `installed\<triplet>\share` | License, Usage and CMake integration files |
 
 
 For more information, see the documentation on [integration](docs/users/integration.md).
@@ -87,6 +87,7 @@ Commands:
   vcpkg remove <pkg>...           Uninstall a package
   vcpkg list                      List installed packages
   vcpkg update                    Display list of packages for updating
+  vcpkg x-history <pkg>           Shows the history of CONTROL versions of a package
   vcpkg integrate install         Make installed packages available user-wide. Requires admin privileges on first use
   vcpkg integrate project         Generate a referencing nuget package for individual VS project use
   ...
