@@ -31,11 +31,11 @@ Clone the repo:
 Run the bootstrap script
 * Windows 
 ```
-PS> .\bootstrap-vcpkg.bat
+.\bootstrap-vcpkg.bat
 ```
 * Linux or MacOS
 ```
-Linux:~/$ ./bootstrap-vcpkg.sh
+./bootstrap-vcpkg.sh
 ```
 
 Install any package with
@@ -51,13 +51,13 @@ All installed libraries are immediately ready to be `#include`'d and used in you
 ```
 cmake ../my/project -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake
 ```
+Projects configured with the toolchain file will have the appropriate vcpkg folders added to the CMake search paths. This makes all libraries available to be found through `find_package()`, `find_path()`, and `find_library()`.
 
 * For Visual Studio/MSBuild projects:
 
 Then, to hook up user-wide integration, run (note: requires admin on first use)
 ```
-PS> .\vcpkg integrate install
-Linux:~/$ ./vcpkg integrate install
+./vcpkg integrate install
 ```
 
 For more information, see the documentation on [integration](docs/users/integration.md).
