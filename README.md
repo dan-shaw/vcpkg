@@ -60,6 +60,10 @@ Then, to hook up user-wide integration, run (note: requires admin on first use)
 ./vcpkg integrate install
 ```
 
+* Manually add the libraries to your `PATH` variable.
+
+Libraries are installed in `installed\[triplet]\lib` and `installed\[triplet]\bin`. Headers are located in `installed\[triplet]\include`
+
 For more information, see the documentation on [integration](docs/users/integration.md).
 
 ## Available Commands
