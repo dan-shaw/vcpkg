@@ -13,8 +13,6 @@ Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS. This too
 Prerequisites:
 - Windows 10, 8.1, 7, Linux, or MacOS
 - Visual Studio 2015 Update 3 or newer (on Windows)
-- Git
-- *Optional:* CMake 3.12.4
 
 Clone the repo:
 ```
