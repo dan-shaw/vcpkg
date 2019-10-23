@@ -1,4 +1,4 @@
-# vcpkg: the C++ package manager
+# vcpkg: the C/C++ package manager
 
 [![Build Status](https://dev.azure.com/vcpkg/public/_apis/build/status/vcpkg-Windows-master-CI?branchName=master)](https://dev.azure.com/vcpkg/public/_build/latest?definitionId=9&branchName=master)
 
@@ -17,10 +17,7 @@
 | x64-uwp  | 624  |
 | arm-uwp  | 594  |
 
-## Overview
-Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS.
-
-## Quick Start
+## Install a library
 Prerequisites:
 - Windows 10, 8.1, 7, Linux, or MacOS
 - Visual Studio 2015 Update 3 or newer (on Windows)
@@ -43,7 +40,7 @@ Linux:~/$ ./bootstrap-vcpkg.sh
 
 Install any package with
 ```
-./vcpkg install zlib
+./vcpkg install zlib:x64-windows
 ```
 
 ## Using the installed package(s)
