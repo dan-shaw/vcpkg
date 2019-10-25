@@ -44,7 +44,7 @@ Install the `zlib` library:
 ```
 ./vcpkg install zlib
 ```
-If you want to target a specific architecture/triplet such as `x64-windows` do `./vcpkg install zlib:x64-windows`
+If you want to target a specific architecture/triplet such as `x64-windows` run `./vcpkg install zlib:x64-windows`
 
 ## Using the installed package(s)
 Libraries are located in the `installed/` folder. Simply, integrate it with your project:
@@ -52,7 +52,7 @@ Libraries are located in the `installed/` folder. Simply, integrate it with your
 * __For CMake projects:__
 
 ```
-cmake ../my/project -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake
+cmake path/to/project -DCMAKE_TOOLCHAIN_FILE=<path-to-vcpkg-directory>\scripts\buildsystems\vcpkg.cmake
 ```
 Projects configured with the toolchain file will have the appropriate vcpkg folders added to the CMake search paths. Libraries can be found with `find_package()`, `find_path()`, and `find_library()`.
 
@@ -76,6 +76,8 @@ All installed packages are located in the following directories:
 
 
 For more information, see the documentation on [integration](docs/users/integration.md).
+For an end-to-end example, see the documentation on [using packages](docs/examples/installing-and-using-packages.md).
+Otherwise, see the [docs](https://github.com/microsoft/vcpkg/blob/master/docs/index.md) for more examples.
 
 ## Available Commands
 
