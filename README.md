@@ -10,7 +10,6 @@
 * __Avoid C++ dependency problems:__ vcpkg was designed so that libraries would work together out of the box. Worry less about dependency resolution, broken diamonds, ODR, and other library resolution problems.
 * __Target-Agnostic:__ Use your own or community-supported toolchains to build for targets such as Android, iOS, FreeBSD. You can also package for various buildsystems such as Meson and Make. 
 * __Active GitHub community:__ Our active GitHub community adds and updates libraries daily. Open an issue or ask a question on Slack!
-* __Speed:__ We have parallel configure and build on by default. We also have local binary caching so you won't have to rebuild binaries you've already built.
 
 | Windows (x86, x64, arm, uwp)  | MacOS | Linux |
 | ------------- | ------------- | ------------- |
