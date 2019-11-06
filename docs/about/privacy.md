@@ -1,20 +1,22 @@
 
 # Privacy and Vcpkg
+Please refer to the Microsoft [privacy statement](https://privacy.microsoft.com/en-US/privacystatement#mainenterprisedeveloperproductsmodule).
 
 ## Do you collect telemetry data? What is it used for?
 
-We do collect telemetry data from usage of "vcpkg.exe". We explicitly ONLY collect information from invocations of the tool itself; we do NOT add any tracking information into the produced libraries. We use this information to understand usage issues, such as failing packages, and to guide tool improvements.
+We do collect telemetry data from usage of "vcpkg". We explicitly ONLY collect information from invocations of the tool itself; we do NOT add any tracking information into the produced libraries. We use this information to understand usage issues, such as failing packages, and to guide tool improvements.
 
-## What telemetry is collected?
+## How do you opt-out of telemetry?
 
-We collect the command line used, the time of invocation, and how long execution took. Some commands also add additional calculated information (such as the full set of libraries to install). We generate a completely random UUID on first use and attach it to each event.
 In order to opt-out of data collection, you can re-run the boostrap script with the following flag, for Windows and Linux/OSX, respectively:
 
 ```PS> .\bootstrap-vcpkg.bat -disableMetrics```
 
 ```~/$ ./bootstrap-vcpkg.sh -disableMetrics```
 
-For more information about how Microsoft protects your privacy, see https://privacy.microsoft.com/en-us/privacy.
+## What telemetry is collected?
+
+We collect the command line used, the time of invocation, and how long execution took. Some commands also add additional calculated information (such as the full set of libraries to install). We generate a completely random UUID on first use and attach it to each event.
 
 Here is an example of an event for the command line `vcpkg install zlib`:
 ```json
